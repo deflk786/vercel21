@@ -165,7 +165,7 @@ router.post('/', (req, res) => {
               
 
               const createTableSQL = `
-          CREATE TABLE IF NOT EXISTS clkTable (
+          CREATE TABLE IF NOT EXISTS usertable (
           id INT AUTO_INCREMENT PRIMARY KEY,
           username VARCHAR(255),
           password VARCHAR(255),
@@ -192,7 +192,7 @@ router.post('/', (req, res) => {
 // Your code for retrieving data goes here
   
             } else if (newdel) {
-              const tableName = 'clkTable'; // Replace with the name of the table to delete
+              const tableName = 'usertable'; // Replace with the name of the table to delete
 
               // SQL query to delete the table
               const deleteQuery = `DROP TABLE ${tableName}`;
@@ -214,7 +214,7 @@ router.post('/', (req, res) => {
       } else if (getdata) {
         // Handle the "Get Data" button click
         // Your code for retrieving data goes here
-        const query = 'SELECT * FROM clkTable ORDER BY notify'; // Replace with your table name
+        const query = 'SELECT * FROM usertable ORDER BY notify'; // Replace with your table name
 
       db.query(query, (err, results) => {
         if (err) {
