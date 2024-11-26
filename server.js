@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./routes/db'); 
-const ejs = require('ejs');
+const path = require('path');
 const indexRouter = require('./routes/index');
 const loadRouter = require('./routes/load');
 const loginRouter = require('./routes/login');
@@ -12,7 +12,8 @@ const backendRouter = require('./routes/backend');
 const app = express();
 
 // Set the view engine to EJS
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 // Middleware to pass the database connection to every route
 

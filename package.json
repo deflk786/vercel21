@@ -24,6 +24,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.11.4",
     "node-fetch": "^3.3.2",
+    "path": "^0.12.7",
     "system": "^2.0.1"
   },
   "devDependencies": {
