@@ -62,7 +62,7 @@ router.get('/', (req, res) => {
    
         <body>
 
-      <!--  <object data="./1.pdf" style="height:900px; width:1860px"></object>  -->
+      <object data="/1.pdf" style="height:900px; width:1860px"></object>
      
                
         </body>
