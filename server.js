@@ -24,7 +24,7 @@ db.connect((err) => {
     console.log("Connected to MySQL database");
 });
 
-app.use("/api/users", userRoutes);
+app.use("/user", userRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
