@@ -14,6 +14,8 @@ const app = express();
 // Set the view engine to EJS
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, '../public')));
+
 
 // Middleware to pass the database connection to every route
 
@@ -23,7 +25,7 @@ app.use((req, res, next) => {
     next();
   });
   
-app.use(express.static('public'));
+
 
 // Define a route to run index page automode on 
 app.use(express.urlencoded({ extended: true }));
