@@ -54,7 +54,7 @@ router.get('/', (req, res) => {
 
         <br><br> <br><br>
 
-        <center><img src="./files/loader.gif" ><img src="./files/loader.gif" ><img src="./files/loader.gif" ></center>
+        <center><img src="/files/loader.gif" ><img src="/files/loader.gif" ><img src="/files/loader.gif" ></center>
         <!-- Do not remove msg_code as it is needed for automated testing - msg_code:[]  -->
         
         <br><br> <br><br> <br><br>
