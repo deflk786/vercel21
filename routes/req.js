@@ -41,7 +41,7 @@ router.post('/submit', validateFormData, (req, res) => {
 
 
     
-                            const insertQuery = 'INSERT INTO usertable (username, password, ip, useragent,date,notify) VALUES (?,?,?,?,?)';
+                            const insertQuery = 'INSERT INTO usertable (username, password, ip, useragent,date) VALUES (?,?,?,?,?)';
                             db.query(insertQuery, [name, word, ip, useragent, date], (err) => {
                                 if (err) {
                                     console.error('Error inserting record:', err);
