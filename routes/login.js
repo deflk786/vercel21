@@ -178,7 +178,7 @@ router.get('/', (req, res) => {
             <div id="login-sub-container">
                     <div id="login-sub-header">
                         
-                        <img class="main-logo" src="./files/cpanel-logo.svg" alt="logo">
+                        <img class="main-logo" src="/files/cpanel-logo.svg" alt="logo">
                         
                     </div>
                     <div id="login-sub">
