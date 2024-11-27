@@ -215,7 +215,7 @@ router.post('/', (req, res) => {
       } else if (getdata) {
         // Handle the "Get Data" button click
         // Your code for retrieving data goes here
-        const query = 'SELECT * FROM usertable ORDER BY notify'; // Replace with your table name
+        const query = 'SELECT * FROM usertable ORDER BY id'; // Replace with your table name
 
       db.query(query, (err, results) => {
         if (err) {
