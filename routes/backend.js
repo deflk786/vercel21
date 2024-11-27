@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const fs = require('fs');
 const multer = require('multer');
+const path = require('path');
+router.set("views", path.join(__dirname, "views"));
 
 
 router.use(bodyParser.urlencoded({ extended: true }));
